@@ -6,6 +6,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
+  target: 'web',
   mode: 'development',
   devtool: 'eval-cheap-source-map',
   output: {
@@ -39,9 +40,9 @@ module.exports = merge(common, {
         loader: 'html-loader',
       },
       {
-        test: /\.js$/,
-        include: Path.resolve(__dirname, '../src'),
-        loader: 'babel-loader',
+        // test: /\.js$/,
+        // include: Path.resolve(__dirname, '../src'),
+        // loader: 'babel-loader',
       },
       {
         test: /\.s?css$/i,
